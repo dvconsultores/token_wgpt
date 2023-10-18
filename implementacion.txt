@@ -10,9 +10,12 @@ near call ft.whatsgpt.testnet new_default_meta '{"owner_id": "ft.whatsgpt.testne
 
 
 
-near call ft.whatsgpt.testnet storage_deposit '' --accountId hpalencia.testnet --amount 0.00125
+near call ft.whatsgpt.testnet storage_deposit '{"account_id":"andromeda2018.testnet"}' --accountId hpalencia.testnet --amount 0.00125
 
 near call ft.whatsgpt.testnet ft_transfer '{"receiver_id": "hpalencia.testnet", "amount": "1000000000000000000000000"}' --accountId ft.whatsgpt.testnet --depositYocto 1
+
+near call ft.whatsgpt.testnet ft_transfer '{"receiver_id": "andromeda2018.testnet", "amount": "5000000000000000000000000000000"}' --accountId ft.whatsgpt.testnet --depositYocto 1
+
 
 near view ft.whatsgpt.testnet ft_balance_of '{"account_id": "hpalencia.testnet"}'
 
